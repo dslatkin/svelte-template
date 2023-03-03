@@ -3,7 +3,7 @@
 {
 	"name": "Node.js & TypeScript",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18"
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -12,6 +12,8 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
+	"onCreateCommand": "npm install -g npm@9"
+
 	// "postCreateCommand": "yarn install",
 
 	// Configure tool-specific properties.
