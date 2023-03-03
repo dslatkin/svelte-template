@@ -12,12 +12,43 @@
     // "forwardPorts": [],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "onCreateCommand": "npm install -g npm@9"
+    "onCreateCommand": "npm install -g npm@9",
 
     // "postCreateCommand": "yarn install",
 
     // Configure tool-specific properties.
-    // "customizations": {},
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "svelte.svelte-vscode",
+                "esbenp.prettier-vscode"
+                // "cweijan.vscode-vitest" // todo: outputs an error in dev containers
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[typescript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[svelte]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[css]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[json]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "workbench.editor.labelFormat": "short",
+                "svelte.enable-ts-plugin": true
+            }
+        }
+    }
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
     // "remoteUser": "root"
