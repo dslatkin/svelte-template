@@ -2,11 +2,11 @@
     import Prism from 'prismjs';
     import 'prismjs/themes/prism.css';
     import 'prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js';
+    import 'prismjs/components/prism-javascript.js';
     import 'prismjs/components/prism-typescript.js';
-    import 'prismjs/components/prism-markup.js';
     import 'prism-svelte';
 
-    export let language: 'html' | 'css' | 'js' | 'ts' | 'svelte';
+    export let language: 'js' | 'ts' | 'svelte';
     export let source: string;
 
     $: formatted = format(source);
