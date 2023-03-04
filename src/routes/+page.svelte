@@ -2,10 +2,10 @@
     import Code from '$lib/Code.svelte';
 
     const source = `
-        <script lang="ts">
+        ${'<'}script lang="ts">
             let test: 'a' | 'b' | () => boolean = undefined
             console.log(test)
-        ${'</' + 'script>'}
+        ${'<'}/script>
         
         <h1>Test</h1>
 
@@ -15,11 +15,11 @@
             <li>Item 3</li>
         </ul>
 
-        <style>
+        ${'<'}style>
             body {
                 background: lightblue;
             }
-        </style>
+        ${'<'}/style>
     `;
 </script>
 
