@@ -24,6 +24,4 @@
     };
 </script>
 
-<pre>
-    <code>{@html formatted}</code>
-</pre>
+<pre><code>{@html formatted}</code></pre>
